@@ -4,15 +4,18 @@ export default defineConfig({
   lang: 'zh',
   title: '前端开发技术笔记',
   titleTemplate: '记录前端开发技术和 Node.js 开发技术',
-  description: '记录前端开发技术和 Node.js 开发技术',
+  // description: '记录前端开发技术和 Node.js 开发技术',
   markdown: {
-    lineNumbers: true,
+    lineNumbers: false,
   },
   lastUpdated: true,
   themeConfig: {
     logo: '/logo.svg',
     siteTitle: false,
     nav: nav(),
+    sidebar: {
+      '/design-pattern/': sidebarDesignPattern(),
+    },
     socialLinks: [{ icon: 'github', link: 'https://github.com/tianyuan233' }],
     footer: {
       copyright: 'Copyright © 2022-present tianyuan233',
@@ -29,41 +32,13 @@ function nav() {
   ]
 }
 
-function sidebarGuide() {
+function sidebarDesignPattern() {
   return [
     {
-      text: 'Introduction',
-      collapsible: true,
+      text: '设计模式',
       items: [
-        { text: 'What is VitePress?', link: '/guide/what-is-vitepress' },
-      ]
-    },
-    {
-      text: 'Writing',
-      collapsible: true,
-      items: [
-        { text: 'Markdown', link: '/guide/markdown' },
-      ]
-    },
-    {
-      text: 'Theme',
-      collapsible: true,
-      items: [
-        { text: 'Introduction', link: '/guide/theme-introduction' },
-      ]
-    },
-    {
-      text: 'Migrations',
-      collapsible: true,
-      items: [
-        {
-          text: 'Migration from VuePress',
-          link: '/guide/migration-from-vuepress'
-        },
-        {
-          text: 'Migration from VitePress 0.x',
-          link: '/guide/migration-from-vitepress-0'
-        }
+        { text: '单例模式', link: '/design-pattern/singleton' },
+        { text: '代理模式', link: '/design-pattern/proxy'},
       ]
     }
   ]
