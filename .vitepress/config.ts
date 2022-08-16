@@ -25,9 +25,7 @@ function nav() {
     { text: '首页', link: '/' },
     { text: '前端基础', link: '/frontend/' },
     { text: '前端框架', link: '/frameworks/' },
-    { text: '前端工程化', link: '/engineering',},
-    { text: '性能优化', link: '/performance',},
-    { text: 'Node.js', link: '/nodejs',},
+    { text: '设计模式', link: '/design-pattern/',activeMatch: '/design-pattern/' },
   ]
 }
 
