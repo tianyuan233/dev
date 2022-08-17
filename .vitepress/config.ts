@@ -3,8 +3,6 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'zh',
   title: '前端开发技术笔记',
-  // titleTemplate: '记录前端开发技术和 Node.js 开发技术',
-  // description: '记录前端开发技术和 Node.js 开发技术',
   markdown: {
     lineNumbers: false,
   },
@@ -16,6 +14,7 @@ export default defineConfig({
     sidebar: {
       '/design-pattern/': sidebarDesignPattern(),
       '/vue/': sidebarVue(),
+      '/frontend/': sidebarFrontend()
     },
     socialLinks: [{ icon: 'github', link: 'https://github.com/tianyuan233' }],
     footer: {
@@ -27,7 +26,7 @@ export default defineConfig({
 function nav() {
   return [
     { text: '首页', link: '/' },
-    { text: '前端基础', link: '/frontend/' },
+    { text: '前端基础', link: '/frontend/javascript/es6' },
     { text: '前端框架', 
       items: [
         { text: 'Vue.js', link: '/vue/' }
@@ -61,6 +60,23 @@ function sidebarVue() {
       text: 'Vue3',
       items: [
         { text: 'Introduction', link: '/config/introduction' },
+      ]
+    }
+  ]
+}
+
+function sidebarFrontend() {
+  return [
+    {
+      text: 'JavaScript',
+      items: [
+        { text: 'ES6', link: '/frontend/javascript/es6' }
+      ]
+    },
+    {
+      text: 'CSS',
+      items: [
+        { text: 'SCSS语法', link: '/frontend/css/scss' },
       ]
     }
   ]
