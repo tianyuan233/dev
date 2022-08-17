@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'zh',
   title: '前端开发技术笔记',
-  titleTemplate: '记录前端开发技术和 Node.js 开发技术',
+  // titleTemplate: '记录前端开发技术和 Node.js 开发技术',
   // description: '记录前端开发技术和 Node.js 开发技术',
   markdown: {
     lineNumbers: false,
@@ -15,6 +15,7 @@ export default defineConfig({
     nav: nav(),
     sidebar: {
       '/design-pattern/': sidebarDesignPattern(),
+      '/vue/': sidebarVue(),
     },
     socialLinks: [{ icon: 'github', link: 'https://github.com/tianyuan233' }],
     footer: {
@@ -27,7 +28,11 @@ function nav() {
   return [
     { text: '首页', link: '/' },
     { text: '前端基础', link: '/frontend/' },
-    { text: '前端框架', link: '/frameworks/' },
+    { text: '前端框架', 
+      items: [
+        { text: 'Vue.js', link: '/vue/' }
+      ] 
+    },
     { text: '设计模式', link: '/design-pattern/',activeMatch: '/design-pattern/' },
   ]
 }
@@ -44,15 +49,18 @@ function sidebarDesignPattern() {
   ]
 }
 
-function sidebarConfig() {
+function sidebarVue() {
   return [
     {
-      text: 'Config',
+      text: 'Vue2',
+      items: [
+        { text: '插件', link: '/vue/plugin' },
+      ]
+    },
+    {
+      text: 'Vue3',
       items: [
         { text: 'Introduction', link: '/config/introduction' },
-        { text: 'App Configs', link: '/config/app-configs' },
-        { text: 'Theme Configs', link: '/config/theme-configs' },
-        { text: 'Frontmatter Configs', link: '/config/frontmatter-configs' }
       ]
     }
   ]
