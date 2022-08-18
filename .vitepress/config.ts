@@ -16,6 +16,11 @@ export default defineConfig({
       '/vue/': sidebarVue(),
       '/frontend/': sidebarFrontend()
     },
+    algolia: {
+      appId: '0L9ORWR03G',
+      apiKey: '9d7caab1188b8191a518bc4efaa454ce',
+      indexName: 'vitepress',
+    },
     socialLinks: [{ icon: 'github', link: 'https://github.com/tianyuan233' }],
     footer: {
       copyright: 'Copyright © 2022-present tianyuan233',
