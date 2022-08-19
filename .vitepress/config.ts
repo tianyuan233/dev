@@ -14,6 +14,7 @@ export default defineConfig({
     sidebar: {
       '/design-pattern/': sidebarDesignPattern(),
       '/vue/': sidebarVue(),
+      '/react/': sidebarReact(),
       '/frontend/': sidebarFrontend()
     },
     algolia: {
@@ -34,7 +35,8 @@ function nav() {
     { text: '前端基础', link: '/frontend/javascript/es6' },
     { text: '前端框架', 
       items: [
-        { text: 'Vue.js', link: '/vue/' }
+        { text: 'Vue.js', link: '/vue/' },
+        { text: 'React.js', link: '/react/' },
       ] 
     },
     { text: '设计模式', link: '/design-pattern/',activeMatch: '/design-pattern/' },
@@ -65,6 +67,17 @@ function sidebarVue() {
       text: 'Vue3',
       items: [
         { text: 'Introduction', link: '/config/introduction' },
+      ]
+    }
+  ]
+}
+
+function sidebarReact() {
+  return [
+    {
+      text: 'React Learning',
+      items: [
+        { text: '基础', link: '/react/base' }
       ]
     }
   ]
