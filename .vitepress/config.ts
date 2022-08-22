@@ -64,7 +64,7 @@ function sidebarVue() {
     {
       text: 'Vue3',
       items: [
-        { text: 'Introduction', link: '/config/introduction' },
+        { text: '基础', link: '/vue/vue3-start.md' },
       ]
     }
   ]
