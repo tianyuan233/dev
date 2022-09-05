@@ -38,8 +38,8 @@ function nav() {
     { text: '前端基础', link: '/frontend/javascript/es6' },
     { text: '前端框架', 
       items: [
-        { text: 'Vue.js', link: '/vue/' },
-        { text: 'React.js', link: '/react/' },
+        { text: 'Vue.js', link: '/vue/vue3-start' },
+        { text: 'React.js', link: '/react/base' },
       ] 
     },
     { text: '设计模式', link: '/design-pattern/',activeMatch: '/design-pattern/' },
@@ -80,9 +80,14 @@ function sidebarReact() {
     {
       text: 'React Learning',
       items: [
-        { text: '基础', link: '/react/base' }
+        { text: '基础', link: '/react/base' },
       ]
-    }
+    },
+    { text: 'Hooks',
+    items:[
+      {text:'useMemo', link:'/react/hooks-useMemo'}
+    ]
+  }
   ]
 }
 
