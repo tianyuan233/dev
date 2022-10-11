@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lang: 'zh',
-  head:[
+  head: [
     ['link', { rel: 'icon', href: './favicon.ico' }],
   ],
   title: '前端开发技术笔记',
@@ -36,13 +36,14 @@ function nav() {
   return [
     { text: '首页', link: '/' },
     { text: '前端基础', link: '/frontend/javascript/es6' },
-    { text: '前端框架', 
+    {
+      text: '前端框架',
       items: [
         { text: 'Vue.js', link: '/vue/vue3-start' },
         { text: 'React.js', link: '/react/base' },
-      ] 
+      ]
     },
-    { text: '设计模式', link: '/design-pattern/',activeMatch: '/design-pattern/' },
+    { text: '设计模式', link: '/design-pattern/singleton' },
   ]
 }
 
@@ -52,7 +53,7 @@ function sidebarDesignPattern() {
       text: '设计模式',
       items: [
         { text: '单例模式', link: '/design-pattern/singleton' },
-        { text: '代理模式', link: '/design-pattern/proxy'},
+        { text: '代理模式', link: '/design-pattern/proxy' },
       ]
     }
   ]
@@ -83,11 +84,12 @@ function sidebarReact() {
         { text: '基础', link: '/react/base' },
       ]
     },
-    { text: 'Hooks',
-    items:[
-      {text:'useMemo', link:'/react/hooks-useMemo'}
-    ]
-  }
+    {
+      text: 'Hooks',
+      items: [
+        { text: 'useMemo', link: '/react/hooks-useMemo' }
+      ]
+    }
   ]
 }
 
