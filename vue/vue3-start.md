@@ -7,16 +7,8 @@
 interface Props {
   msg:string
 }
-const {
-  msg = 'test'
-} = defineProps<Props>()
-</script>
-```
-但是需要在 vite 开启一个配置项
-```js
-export default defineConfig({
-  plugins: [vue({
-    reactivityTransform: true
-  })]
-})
+
+const props = withDefaults(
+  defineProps<Props>(), { msg: 'hello world' }
+)
 ```
