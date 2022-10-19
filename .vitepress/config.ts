@@ -98,7 +98,8 @@ function sidebarFrontend() {
     {
       text: 'JavaScript',
       items: [
-        { text: 'ES6', link: '/frontend/javascript/es6' }
+        { text: 'ES6', link: '/frontend/javascript/es6' },
+        { text: 'Event', link: '/frontend/javascript/event' }
       ]
     },
     {
