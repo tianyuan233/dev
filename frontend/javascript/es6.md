@@ -41,3 +41,11 @@ export { default } from …;
 
 
 ## 解构
+
+## 深拷贝和浅拷贝
+### 浅拷贝
+fliter也可以实现浅拷贝
+```js
+const arrA = [{name:'qwe'}]
+const arrB = arrA.filter(x=>x)
+```
