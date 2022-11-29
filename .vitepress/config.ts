@@ -18,13 +18,14 @@ export default defineConfig({
       '/design-pattern/': sidebarDesignPattern(),
       '/vue/': sidebarVue(),
       '/react/': sidebarReact(),
-      '/frontend/': sidebarFrontend()
+      '/frontend/': sidebarFrontend(),
+      '/tool/': sidebarTool()
     },
-    algolia: {
-      appId: '0L9ORWR03G',
-      apiKey: '9d7caab1188b8191a518bc4efaa454ce',
-      indexName: 'vitepress',
-    },
+    // algolia: {
+    //   appId: '0L9ORWR03G',
+    //   apiKey: '9d7caab1188b8191a518bc4efaa454ce',
+    //   indexName: 'vitepress',
+    // },
     socialLinks: [{ icon: 'github', link: 'https://github.com/tianyuan233' }],
     footer: {
       copyright: 'Copyright © 2022-present tianyuan233',
@@ -44,6 +45,14 @@ function nav() {
       ]
     },
     { text: '设计模式', link: '/design-pattern/singleton' },
+    {
+      text: '开发工具',
+      items: [
+        { text: 'Git', link: '/tool/git-flow' },
+        { text: 'VS Code', link: '/tool/vscode' },
+      ]
+    },
+
   ]
 }
 
@@ -99,7 +108,8 @@ function sidebarFrontend() {
       text: 'JavaScript',
       items: [
         { text: 'ES6', link: '/frontend/javascript/es6' },
-        { text: 'Event', link: '/frontend/javascript/event' }
+        { text: 'Event', link: '/frontend/javascript/event' },
+        { text: 'Event Loop', link: '/frontend/javascript/event-loop' },
       ]
     },
     {
@@ -108,5 +118,22 @@ function sidebarFrontend() {
         { text: 'SCSS语法', link: '/frontend/css/scss' },
       ]
     }
+  ]
+}
+function sidebarTool() {
+  return [
+    {
+      text: 'Git',
+      items: [
+        { text: 'Git 协作指南', link: '/tool/git-flow.md' },
+      ]
+    },
+    {
+      text: 'VS Code',
+      items: [
+        { text: 'VS Code', link: '/tool/vscode.md' },
+      ]
+    }
+
   ]
 }
