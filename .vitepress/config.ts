@@ -110,6 +110,7 @@ function sidebarFrontend() {
         { text: 'ES6', link: '/frontend/javascript/es6' },
         { text: 'Event', link: '/frontend/javascript/event' },
         { text: 'Event Loop', link: '/frontend/javascript/event-loop' },
+        { text: 'Promise', link: '/frontend/javascript/promise' },
       ]
     },
     {
