@@ -127,6 +127,7 @@ function sidebarTool() {
       text: 'Git',
       items: [
         { text: 'Git 协作指南', link: '/tool/git-flow.md' },
+        { text: 'Git 代理配置', link: '/tool/git-proxy.md' },
       ]
     },
     {
