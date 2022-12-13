@@ -19,7 +19,8 @@ export default defineConfig({
       '/vue/': sidebarVue(),
       '/react/': sidebarReact(),
       '/frontend/': sidebarFrontend(),
-      '/tool/': sidebarTool()
+      '/tool/': sidebarTool(),
+      '/network/': sidebarNetwork(),
     },
     // algolia: {
     //   appId: '0L9ORWR03G',
@@ -44,7 +45,13 @@ function nav() {
         { text: 'React.js', link: '/react/base' },
       ]
     },
-    { text: '设计模式', link: '/design-pattern/singleton' },
+    {
+      text: '通用知识',
+      items: [
+        { text: '设计模式', link: '/design-pattern/singleton' },
+        { text: 'HTTP', link: '/network/http' },
+      ]
+    },
     {
       text: '开发工具',
       items: [
@@ -111,6 +118,7 @@ function sidebarFrontend() {
         { text: 'Event', link: '/frontend/javascript/event' },
         { text: 'Event Loop', link: '/frontend/javascript/event-loop' },
         { text: 'Promise', link: '/frontend/javascript/promise' },
+        { text: '手写代码', link: '/frontend/javascript/interview' },
       ]
     },
     {
@@ -138,4 +146,28 @@ function sidebarTool() {
     }
 
   ]
+}
+
+function sidebarNetwork() {
+  return [
+    {
+      text: 'HTTP',
+      items:[
+        {
+          text: 'HTTP基础',
+          link: '/network/http-base'
+        },
+      ]
+    },
+    {
+      text: 'HTTPS',
+      items:[
+        {
+          text: 'HTTPS基础',
+          link: '/network/https-base'
+        },
+      ]
+    },
+  ]
+
 }
