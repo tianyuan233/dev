@@ -11,6 +11,7 @@ export default defineConfig({
   },
   lastUpdated: true,
   themeConfig: {
+    outlineTitle:'目录',
     logo: '/logo.svg',
     siteTitle: false,
     nav: nav(),
@@ -114,6 +115,7 @@ function sidebarFrontend() {
     {
       text: 'JavaScript',
       items: [
+        { text: '基础', link: '/frontend/javascript/base' },
         { text: 'ES6', link: '/frontend/javascript/es6' },
         { text: 'Event', link: '/frontend/javascript/event' },
         { text: 'Event Loop', link: '/frontend/javascript/event-loop' },
