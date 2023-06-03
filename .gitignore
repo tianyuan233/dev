@@ -5,3 +5,4 @@ docs/.vitepress/dist
 .idea
 
 .vitepress/dist
+pnpm-lock.yaml
