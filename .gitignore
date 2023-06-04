@@ -6,3 +6,7 @@ docs/.vitepress/dist
 
 .vitepress/dist
 pnpm-lock.yaml
+.vitepress/cache/deps/_metadata.json
+.vitepress/cache/deps/package.json
+.vitepress/cache/deps/vue.js
+.vitepress/cache/deps/vue.js.map
