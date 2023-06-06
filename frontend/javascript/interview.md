@@ -75,3 +75,6 @@ const p = _new(Person, "tom");
 
 console.log(p.name);
 ```
+
+## call 实现
+

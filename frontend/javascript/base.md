@@ -78,14 +78,37 @@
 函数的作用域基于函数创建的位置
 
 ### 原型和原型链
+![原型链](/prototype.png)
 
 参考链接
 [JavaScript 深入之从原型到原型链](https://github.com/mqyqingfeng/Blog/issues/2)
 
+#### 基于原型链的继承
+
+```javascript
+function Parent() {
+    this.name = 'kevin';
+}
+
+Parent.prototype.getName = function() {
+    console.log(this.name);
+}
+
+function Child() {
+
+}
+
+Child.prototype = new Parent();
+
+var child1 = new Child();
+
+console.log(child1.getName()); // kevin
+``` 
+
 ### 闭包
 
 > 闭包是指有权访问另一个函数作用域中的变量的函数
-```JavaScript
+```javascript
 function foo() {
     var a = 2;
     function bar() {
