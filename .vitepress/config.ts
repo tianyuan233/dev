@@ -114,7 +114,11 @@ function sidebarFrontend() {
     },
     {
       text: "CSS",
-      items: [{ text: "SCSS语法", link: "/frontend/css/scss" }],
+      items: [
+        { text: "CSS基础", link: "/frontend/css/css" },
+        { text: "SCSS语法", link: "/frontend/css/scss" }
+        
+      ],
     },
   ];
 }
@@ -145,6 +149,15 @@ function sidebarTool() {
 
 function sidebarNetwork() {
   return [
+    {
+      text: "计算机网络",
+      items: [
+        {
+          text: "计算机网络基础",
+          link: "/network/computer-network",
+        },
+      ],
+    },
     {
       text: "HTTP",
       items: [
