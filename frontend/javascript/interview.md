@@ -62,7 +62,7 @@ setTimeout(() => {
 ```js
 const _new = (fn, ...args) => {
   const obj = Object.create(null);
-  obj.__proto__ = fn.prototype;
+  obj.__proto__ = fn.prototype; //arr.__proto__ === Array.prototype
   const ret = fn.apply(obj, args);
   return typeof ret === "object" ? ret : obj;
 };

@@ -77,6 +77,8 @@ app.get("/example", function (req, res) {
 
 需要注意的是，不同的指令可以具有不同的优先级和互斥关系。因此，在设置"Cache-Control"头部字段时，需要仔细考虑每个指令的含义和适用场景，并根据具体需求进行选择和组合。
 
+[MDN Cache-Control](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Cache-Control)
+
 ### 协商缓存
 
 协商缓存是一种缓存机制，用于在客户端和服务器之间进行通信，以确定资源是否需要重新下载。相比于强缓存直接从缓存中获取资源，协商缓存需要与服务器进行一次请求和响应的交互。
